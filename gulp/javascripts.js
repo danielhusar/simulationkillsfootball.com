@@ -10,24 +10,25 @@ var insert = function (obj, index, item) {
   obj.splice(index, 0, item);
 };
 
-module.exports = function(gulp, jsFiles){
+module.exports = function(gulp){
 
   gulp.task('lint', function () {
-    return gulp.src(jsFiles).pipe(jshint()).pipe(jshint.reporter(stylish));
+    return gulp.src('public/js/app.js').pipe(jshint()).pipe(jshint.reporter(stylish));
   });
 
   //lint javascript
-  var scriptFiles = jsFiles.slice(0);
+  var scriptFiles = [];
   scriptFiles.push('public/js/libraries/jquery.mousewheel.js');
   scriptFiles.push('public/js/libraries/jquery.slidescroll.js');
-
-  console.log(scriptFiles);
+  scriptFiles.push('public/js/app.js');
 
   gulp.task('scripts', function () {
     gulp.src(scriptFiles)
-      .pipe(concat('a.min.js'))
+      .pipe(concat('app.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest('public/js'));
   });
+
+
 
 };

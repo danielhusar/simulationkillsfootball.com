@@ -3,16 +3,10 @@
 // Include gulp
 var gulp = require('gulp');
 
-//js files
-var jsFiles = [
-  'public/js/app.js'
-  ];
-
-
 // Include Our Plugins
-require('./gulp/javascripts.js')(gulp, jsFiles);
+require('./gulp/javascripts.js')(gulp);
 require('./gulp/css.js')(gulp);
-require('./gulp/dev.js')(gulp, jsFiles);
+require('./gulp/dev.js')(gulp);
 require('./gulp/img.js')(gulp);
 
 //tasks aliases
