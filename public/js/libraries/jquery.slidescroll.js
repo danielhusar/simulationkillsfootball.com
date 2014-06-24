@@ -113,7 +113,13 @@
 			}
 		}.bind(this));
 
-    this.$nav.append($('[data-social]').html());
+    var $cl = $('.social').clone();
+    $cl.find('.zoom-in').removeClass('zoom-in');
+    $cl.find('.icon-facebook').removeClass('icon-facebook').addClass('icon-facebook-small');
+    $cl.find('.icon-twitter').removeClass('icon-twitter').addClass('icon-twitter-small');
+    $cl.find('.icon-google').removeClass('icon-google').addClass('icon-google-small');
+
+    this.$nav.append($cl);
 
 		if (this.options.generateNavigation && !this.navigationEnabled) {
 			this.$navItems = this.$nav.children();
@@ -350,7 +356,10 @@
 		this.addClass($html, 'transitioning');
 
     this.$pages.removeClass('active');
-    $(this.$pages[index]).addClass('active');
+    //setTimeout(function(){
+      $(this.$pages[index]).addClass('active');
+    //}.bind(this), 500);
+
 
 		if ($.type(this.options.beforemove) === 'function') {
 			this.options.beforemove.apply(this, [

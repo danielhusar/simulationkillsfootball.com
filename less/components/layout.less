@@ -120,30 +120,17 @@ body{
 }
 
 .hashtag{
-  .from-left{
-    transform: translate3d(-300%, 0, 0);
+  .slide-left{
     opacity: 0;
     transition: transform 1500ms ease, opacity 500ms ease;
     .active & {
-      transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
-  .from-top{
-    transform: translate3d(0, -300%, 0);
+  .slide-right{
     opacity: 0;
-    transition: transform 1500ms 200ms ease, opacity 500ms ease;
+    transition: transform 1500ms ease, opacity 500ms ease;
     .active & {
-      transform: translate3d(0, 0, 0);
-      opacity: 1;
-    }
-  }
-  .from-right{
-    transform: translate3d(300%, 0, 0);
-    opacity: 0;
-    transition: transform 1500ms 300ms ease, opacity 500ms ease;
-    .active & {
-      transform: translate3d(0, 0, 0);
       opacity: 1;
     }
   }
