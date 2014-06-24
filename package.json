@@ -1,0 +1,32 @@
+{
+  "name": "zurich-life",
+  "description": "Zurich Life",
+  "keywords": [
+    "frontend",
+    "development"
+  ],
+  "scripts": {
+    "test": "mocha-phantomjs test/index.html"
+  },
+  "version": "0.1.0",
+  "author": "IQ Content",
+  "devDependencies": {
+    "gulp": "^3.6.2",
+    "gulp-rename": "^1.2.0",
+    "gulp-concat": "^2.2.0",
+    "gulp-jshint": "^1.6.0",
+    "gulp-uglify": "^0.3.0",
+    "gulp-less": "^1.2.3",
+    "gulp-cssmin": "~0.1.1",
+    "gulp-autoprefixer": "^0.0.7",
+    "gulp-replace": "^0.3.0",
+    "gulp-html-prettify": "^0.0.1",
+    "gulp.spritesmith": "^0.5.0",
+    "gulp-w3cjs": "^0.1.2",
+    "gulp-imagemin": "^0.5.0",
+    "jshint-stylish": "^0.2.0",
+    "serve-index": "^1.0.2",
+    "express": "^4.2.0",
+    "open": "^0.0.5"
+  }
+}
