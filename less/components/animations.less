@@ -1,6 +1,6 @@
 .slide-left{
   transform: translate(-100%, 0);
-  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  transition: transform 1000ms cubic-bezier(@cubic);
   .active & {
     transform: translate(0, 0);
   }
@@ -8,16 +8,37 @@
 
 .slide-right{
   transform: translate(100%, 0);
-  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  transition: transform 1000ms cubic-bezier(@cubic);
   .active & {
     transform: translate(0, 0);
   }
 }
 
+.slide-top{
+  transform: translate(0, -500%);
+  opacity: 0;
+  transition: transform 1000ms ease, opacity 500ms ease;
+  .active & {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
+.slide-bottom{
+  transform: translate(0, 500%);
+  opacity: 0;
+  transition: transform 1000ms ease, opacity 500ms ease;
+  .active & {
+    transform: translate(0, 0);
+    opacity: 1;
+  }
+}
+
 .zoom-in{
   transform: scale(0);
-  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  transition: transform 1500ms cubic-bezier(@cubic);
   .active & {
     transform: scale(1);
   }
 }
+

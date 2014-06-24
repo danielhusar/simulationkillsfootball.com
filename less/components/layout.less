@@ -5,6 +5,9 @@ body{
   @media all and (min-width: @mobileBreakpoint) {
     font-size: 1em;
   }
+  .dark {
+    color: white;
+  }
 }
 
 .block{
@@ -18,7 +21,35 @@ body{
 }
 
 @media all and (max-width: (@mobileBreakpoint - 1)) {
-  .scale-sm{
+  .scale-sm,
+  body .active .scale-sm{
     transform: scale(0.8);
+  }
+}
+
+.space-bottom{
+  margin-bottom: 20px;
+}
+.space-top{
+  margin-top: 20px;
+}
+
+.fifa{
+  width: 580px;
+  margin: 0 auto;
+  background-color: white
+  @media all and (max-width: 600px) {
+    width: 100%;
+  }
+  header{
+    padding: 20px;
+    color: white;
+    background-color: #143e92;
+    .title{
+      font-size: 1em;
+    }
+  }
+  main{
+
   }
 }
