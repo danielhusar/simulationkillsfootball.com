@@ -109,9 +109,11 @@
 					el.addClass(this.options.activeClassName);
 				}
 
-				this.$nav.append(el);
+        this.$nav.append(el);
 			}
 		}.bind(this));
+
+    this.$nav.append($('[data-social]').html());
 
 		if (this.options.generateNavigation && !this.navigationEnabled) {
 			this.$navItems = this.$nav.children();

@@ -26,6 +26,15 @@ body{
 .inline{
   display: inline;
 }
+.unstyled{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  li{
+    padding: 0;
+    margin: 0;
+  }
+}
 
 @media all and (max-width: (@mobileBreakpoint - 1)) {
   .scale-sm,
@@ -140,5 +149,33 @@ body{
   }
   span{
     display: inline-block;
+  }
+}
+
+.social{
+  li{
+    display: inline-block;
+    a{
+      padding: 8px 55px 7px;
+      border-radius: 3px;
+      margin: 0 15px;
+      display: inline-block;
+      @media all and (max-width: 600px) {
+        padding: 8px 35px 7px;
+      }
+      @media all and (max-width: (@mobileBreakpoint - 1)) {
+        padding: 5px 25px 4px;
+        margin: 0 10px;
+      }
+      &.facebook{
+        background-color: #4d68a1;
+      }
+      &.twitter{
+        background-color: #58ccff;
+      }
+      &.google{
+        background-color: #c63725;
+      }
+    }
   }
 }

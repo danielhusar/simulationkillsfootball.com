@@ -31,62 +31,30 @@
 // Navigation
 .slidescroll-nav {
 	position: absolute;
-	top: 50%;
+	top: 30%;
 	right: 20px;
-
-	a {
-		text-decoration: none;
-		cursor: pointer;
-		overflow: hidden;
-	}
-
-	a, span {
+	> a{
+    text-decoration: none;
+    cursor: pointer;
+    overflow: hidden;
 		position: relative;
 		display: block;
-	}
-
-	span {
-		line-height: 20px;
-	}
-
-	.index {
-		position: absolute;
-		top: (20px - 4px) / 2;
-		right: 3px;
-		display: block;
-		width: 4px;
-		height: 4px;
-		border-radius: 50%;
-		background: #777;
-		text-indent: 100%;
-		white-space: nowrap;
-		overflow: hidden;
-	}
-
-	.active {
-		.index {
-			top: (20px - 10px) / 2;
-			right: 0;
-			width: 8px;
-			height: 8px;
-			background: transparent;
-			border: 1px solid #777;
-		}
-	}
-
-	.title {
-		text-align: right;
-		padding-right: 20px;
-		color: #777;
-		opacity: 0;
-		font-size: em(12);
-		transition: opacity 0.3s;
-    display: block;
     width: 20px;
     height: 20px;
+    background-color: #1c1c1c;
+    border-radius: 50%;
+    margin-bottom: 5px;
+    &.active{
+      background-color: #b3b3b3;
+    }
 	}
-
-	a:hover .title {
-		opacity: 1;
+	span {
+		display: none;
 	}
+  .social{
+    a{
+      padding: 5px 5px 4px;
+      display: block;
+    }
+  }
 }

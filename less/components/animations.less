@@ -50,21 +50,22 @@
   }
 }
 
-.delay-200{
-  transition-delay: 200ms;
+@iterations: 10;
+.delay-loop (@i) when (@i > 0) {
+  .delay-@{i},
+  .active .delay-@{i} {
+    transition-delay: @i * 100ms;
+  }
+  .delay-loop(@i - 1);
 }
-.delay-300{
-  transition-delay: 300ms;
+.delay-loop (@iterations);
+
+@iterations: 10;
+.speed-loop (@i) when (@i > 0) {
+  .speed-@{i},
+  .active .speed-@{i} {
+    transition-duration: @i * 100ms;
+  }
+  .speed-loop(@i - 1);
 }
-.delay-400{
-  transition-delay: 400ms;
-}
-.speed-200{
-  transition-duration: 200ms;
-}
-.speed-300{
-  transition-duration: 300ms;
-}
-.speed-400{
-  transition-duration: 400ms;
-}
+.speed-loop (@iterations);
