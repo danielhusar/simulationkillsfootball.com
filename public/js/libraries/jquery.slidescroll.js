@@ -91,17 +91,7 @@
 			// Prepare Navigation
 			if (this.options.generateNavigation) {
 				var el = $('<a />');
-				var title = ['<span class="index">', index + 1, '</span>'];
-
-				if (titleData || titleSelector) {
-					$.merge(title, [
-						' <span class="title">',
-						titleData || $item.find(titleSelector).first().text(),
-						'</span>'
-					]);
-				}
-
-				el.html(title.join(''));
+				el.html('&nbsp;');
 				el.data('target-slide', index);
 				el.attr('href', '#' + key);
 

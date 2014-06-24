@@ -12,4 +12,8 @@
     e.preventDefault();
   });
 
+  $('body').on('click.app', '.slidescroll-nav a', function(){
+    window.location.hash = $(this).attr('href');
+  });
+
 })(this, this.jQuery);
