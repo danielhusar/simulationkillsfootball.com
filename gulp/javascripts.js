@@ -12,20 +12,22 @@ var insert = function (obj, index, item) {
 
 module.exports = function(gulp, jsFiles){
 
-  //lint javascript
-  var lintFiles = jsFiles.slice(0);
-  lintFiles.push('public/js/app/init.js');
-
   gulp.task('lint', function () {
-    return gulp.src(lintFiles).pipe(jshint()).pipe(jshint.reporter(stylish));
+    return gulp.src(jsFiles).pipe(jshint()).pipe(jshint.reporter(stylish));
   });
+
+  //lint javascript
+  var scriptFiles = jsFiles.slice(0);
+  scriptFiles.push('public/js/libraries/jquery.mousewheel.js');
+  scriptFiles.push('public/js/libraries/jquery.slidescroll.js');
+
+  console.log(scriptFiles);
 
   gulp.task('scripts', function () {
     gulp.src(scriptFiles)
-      .pipe(concat('app.js'))
-      .pipe(rename('app.min.js'))
+      .pipe(concat('a.min.js'))
       .pipe(uglify())
-      .pipe(gulp.dest('public/js/app'));
+      .pipe(gulp.dest('public/js'));
   });
 
 };

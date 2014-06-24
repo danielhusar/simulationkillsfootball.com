@@ -5,7 +5,7 @@ var gulp = require('gulp');
 
 //js files
 var jsFiles = [
-  'public/js/app/app.js'
+  'public/js/app.js'
   ];
 
 
