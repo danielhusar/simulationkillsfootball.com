@@ -1,12 +1,19 @@
 body{
   font-family: ProximaNova, serif;
-  color: #1e426d;
+  color: @darkColor;
   font-size: .7em;
+  a{
+    color: @darkColor;
+    text-decoration: none;
+  }
   @media all and (min-width: @mobileBreakpoint) {
     font-size: 1em;
   }
   .dark {
-    color: white;
+    color: @lightColor;
+    a{
+      color: @lightColor;
+    }
   }
 }
 
@@ -23,7 +30,7 @@ body{
 @media all and (max-width: (@mobileBreakpoint - 1)) {
   .scale-sm,
   body .active .scale-sm{
-    transform: scale(0.8);
+    transform: scale(0.7);
   }
 }
 
@@ -42,8 +49,8 @@ body{
   }
   header{
     padding: 20px;
-    color: white;
-    background-color: #143e92;
+    color: @lightColor;
+    background-color: @darkColor;
     position: relative;
     text-align: left;
     border-radius: 4px 4px 0 0;
@@ -85,23 +92,53 @@ body{
   }
   article{
     padding: 20px;
-    color: #1e426d;
+    color: @darkColor;
     font-size: 1.4em;
     font-weight: 300;
     background-color: white;
-    .orange{
-      color: #e6952d;
-    }
     img{
       margin-top: 20px;
     }
   }
   footer{
     font-size: .7em;
-    color: #1e426d;
+    color: @darkColor;
     padding: 10px 20px;
     text-align: left;
     background-color: white;
     border-radius: 0 0 4px 4px;
+  }
+}
+
+.hashtag{
+  .from-left{
+    transform: translate3d(-300%, 0, 0);
+    opacity: 0;
+    transition: transform 1500ms ease, opacity 500ms ease;
+    .active & {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  .from-top{
+    transform: translate3d(0, -300%, 0);
+    opacity: 0;
+    transition: transform 1500ms 200ms ease, opacity 500ms ease;
+    .active & {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  .from-right{
+    transform: translate3d(300%, 0, 0);
+    opacity: 0;
+    transition: transform 1500ms 300ms ease, opacity 500ms ease;
+    .active & {
+      transform: translate3d(0, 0, 0);
+      opacity: 1;
+    }
+  }
+  span{
+    display: inline-block;
   }
 }
