@@ -1,0 +1,23 @@
+.slide-left{
+  transform: translate(-100%, 0);
+  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  .active & {
+    transform: translate(0, 0);
+  }
+}
+
+.slide-right{
+  transform: translate(100%, 0);
+  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  .active & {
+    transform: translate(0, 0);
+  }
+}
+
+.zoom-in{
+  transform: scale(0);
+  transition: transform 1000ms cubic-bezier(.07,.21,0,1.13);
+  .active & {
+    transform: scale(1);
+  }
+}
