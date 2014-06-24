@@ -16,18 +16,7 @@ module.exports = function(gulp){
       cssTemplate: 'css.mustache'
     }));
     icons.img.pipe(gulp.dest('public/img/'));
-    icons.css.pipe(gulp.dest('less/base/'));
-
-    var dropdowns = gulp.src('assets/dropdown/*.png').pipe(spritesmith({
-      imgName: 'dropdowns.png',
-      imgPath: '../img/dropdowns.png',
-      cssName: 'dropdowns.less',
-      engine: 'phantomjs',
-      algorithm: 'top-down',
-      cssTemplate: 'css.mustache'
-    }));
-    dropdowns.img.pipe(gulp.dest('public/img/'));
-    dropdowns.css.pipe(gulp.dest('less/base/'));
+    icons.css.pipe(gulp.dest('less/components/'));
   });
 
   gulp.task('imagemin', function () {

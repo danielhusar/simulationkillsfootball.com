@@ -1,17 +1,12 @@
 #static directory
-reports
 cache/*
 public/js/app.js
 public/js/app.min.js
-public/js/app.min.js
-public/js/plugins.js
-public/js/plugins.min.js
 public/css/*.css
 public/css/*.map
 screenshots
 *.sublime-project
 *.sublime-workspace
-.sass-cache
 screens
 node_modules
-assets
+assets/psd

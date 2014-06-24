@@ -17,23 +17,37 @@
   <!--[if lt IE 9]>
     <link rel="stylesheet" href="css/IE.css">
   <![endif]-->
+  <script src="js/libraries/modernizr.min.js"></script>
 </head>
 
 <body role="document">
 
-  <main role="main">
-    <section></section>
-    <section></section>
-    <section></section>
-  </main>
+  <div class="slidescroll-wrap">
+    <main role="main" class="main">
+      <section class="page bg-1" id="page-1">
+        <div class="content">
+          <i class="icon icon-globe scale-sm"></i>
+          <h1 class="uppercase light">
+            <div>Over <span class="bold">3 Billion People</span></div>
+            <div>Around the world will watch</div>
+            <div class="bold">2014 world cup</div>
+          </h1>
+        </div>
+      </section>
+      <section class="page bg-1" id="page-2">test</section>
+      <section class="page bg-3" id="page-3">test</section>
+    </main>
+  </div>
 
-  <script src="//code.jquery.com/jquery-1.11.0.js"></script>
+  <script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
   <script>
     if (!window.jQuery) {
         document.write('<script src="js/libraries/jquery-1.11.0.min.js"><\/script>');
     }
   </script>
-  <script src="js/app.min.js"></script>
+  <script src="js/libraries/jquery.mousewheel.js"></script>
+  <script src="js/libraries/jquery.slidescroll.js"></script>
+  <script src="js/app.js"></script>
 
 </body>
 </html>

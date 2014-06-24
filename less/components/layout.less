@@ -1,0 +1,24 @@
+body{
+  font-family: ProximaNova, serif;
+  color: #1e426d;
+  font-size: .7em;
+  @media all and (min-width: @mobileBreakpoint) {
+    font-size: 1em;
+  }
+}
+
+.block{
+  display: block;
+}
+.inline-block{
+  display: inline-block;
+}
+.inline{
+  display: inline;
+}
+
+@media all and (max-width: (@mobileBreakpoint - 1)) {
+  .scale-sm{
+    transform: scale(0.8);
+  }
+}
