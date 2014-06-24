@@ -41,6 +41,9 @@ body{
   body .active .scale-sm{
     transform: scale(0.7);
   }
+  .globe{
+    max-width: 200px;
+  }
 }
 
 .space-bottom{
@@ -53,7 +56,7 @@ body{
 .fifa{
   width: 580px;
   margin: 0 auto;
-  @media all and (max-width: 600px) {
+  @media all and (max-width: 660px) {
     width: 100%;
   }
   header{
@@ -76,7 +79,7 @@ body{
       min-height: 70px;
       span{
         display: block;
-        @media all and (max-width: 600px) {
+        @media all and (max-width: 660px) {
           display: inline;
         }
       }
@@ -143,17 +146,21 @@ body{
   li{
     display: inline-block;
     a{
-      padding: 8px 55px 7px;
+
       border-radius: 3px;
       margin: 0 15px;
       display: inline-block;
-      @media all and (max-width: 600px) {
-        padding: 8px 35px 7px;
+      main & {
+        padding: 8px 55px 7px;
+        @media all and (max-width: 660px) {
+          padding: 8px 35px 7px;
+        }
+        @media all and (max-width: (@mobileBreakpoint - 1)) {
+          padding: 5px 15px 4px;
+          margin: 0 5px;
+        }
       }
-      @media all and (max-width: (@mobileBreakpoint - 1)) {
-        padding: 5px 25px 4px;
-        margin: 0 10px;
-      }
+
       &.facebook{
         background-color: #4d68a1;
       }
