@@ -1,6 +1,5 @@
 #static directory
 cache/*
-public/js/app.js
 public/js/app.min.js
 public/css/*.css
 public/css/*.map
