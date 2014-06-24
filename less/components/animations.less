@@ -1,35 +1,35 @@
 .slide-left{
-  transform: translate(-100%, 0);
+  transform: translate3d(-100%, 0, 0);
   transition: transform 1000ms cubic-bezier(@cubic);
   .active & {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .slide-right{
-  transform: translate(100%, 0);
+  transform: translate3d(100%, 0, 0);
   transition: transform 1000ms cubic-bezier(@cubic);
   .active & {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
   }
 }
 
 .slide-top{
-  transform: translate(0, -500%);
+  transform: translate3d(0, -500%, 0);
   opacity: 0;
   transition: transform 1000ms ease, opacity 500ms ease;
   .active & {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }
 
 .slide-bottom{
-  transform: translate(0, 500%);
+  transform: translate3d(0, 500%, 0);
   opacity: 0;
   transition: transform 1000ms ease, opacity 500ms ease;
   .active & {
-    transform: translate(0, 0);
+    transform: translate3d(0, 0, 0);
     opacity: 1;
   }
 }

@@ -37,7 +37,6 @@ body{
 .fifa{
   width: 580px;
   margin: 0 auto;
-  background-color: white
   @media all and (max-width: 600px) {
     width: 100%;
   }
@@ -45,11 +44,64 @@ body{
     padding: 20px;
     color: white;
     background-color: #143e92;
+    position: relative;
+    text-align: left;
+    border-radius: 4px 4px 0 0;
+    @media all and (max-width: (@mobileBreakpoint - 1)) {
+      font-size: 1.2em;
+    }
     .title{
+      position: relative;
+      padding: 10px 0 0 100px;
       font-size: 1em;
+      display: inline-block;
+      font-weight: 100;
+      font-size: 1.1em;
+      min-height: 70px;
+      span{
+        display: block;
+        @media all and (max-width: 600px) {
+          display: inline;
+        }
+      }
+      &:after{
+        content: ' ';
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: inline-block;
+        &:extend(.icon-fifa all);
+      }
+    }
+    .counter{
+      position: absolute;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid #e6952d;
+      border-radius: 2px;
+      padding: 1px 5px;
+      font-size: .7em;
     }
   }
-  main{
-
+  article{
+    padding: 20px;
+    color: #1e426d;
+    font-size: 1.4em;
+    font-weight: 300;
+    background-color: white;
+    .orange{
+      color: #e6952d;
+    }
+    img{
+      margin-top: 20px;
+    }
+  }
+  footer{
+    font-size: .7em;
+    color: #1e426d;
+    padding: 10px 20px;
+    text-align: left;
+    background-color: white;
+    border-radius: 0 0 4px 4px;
   }
 }
