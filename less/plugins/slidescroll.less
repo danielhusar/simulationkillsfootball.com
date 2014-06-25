@@ -32,7 +32,7 @@
 .slidescroll-nav {
 	position: absolute;
 	top: 30%;
-	right: 2px;
+	right: 7px;
 	> a{
     text-decoration: none;
     cursor: pointer;
@@ -43,7 +43,7 @@
     height: 14px;
     background-color: #1c1c1c;
     border-radius: 50%;
-    margin-bottom: 5px;
+    margin: 0 3px 5px 0;
     &.active{
       background-color: #b3b3b3;
     }
@@ -52,20 +52,25 @@
 		display: none;
 	}
   .social{
-    margin: 20px 5px 0 0;
-    width: 40px;
-    margin-left: -20px;
+    position: absolute;
+    width: 21px;
+    right: 0;
+    margin-top: 10px;
     li{
       display: block;
       margin-bottom: 10px;
+      width: 21px;
+      height: 22px;
       a{
-        padding: 2px 3px;
-        @media all and (min-width: (@mobileBreakpoint )) {
-          padding: 0 2px 2px;
-        }
+        display: block;
+        width: 21px;
+        height: 22px;
+        padding: 2px 2px 1px 2px;
+        margin: 0;
         text-align: center;
-        .icon-google{
-          transform: scale(0.9);
+        text-align: center;
+        .icon{
+          display: block;
         }
       }
     }
