@@ -1,27 +1,102 @@
 .page{
-  background-size: cover;
-  background-position: top center;
   width: 100%;
   text-align: center;
   display: table;
+  position: relative;
+  z-index: 2;
   .content{
     display: table-cell;
     vertical-align: middle;
     padding: 0 30px;
   }
-  &.dark{
-    box-shadow: 0px -1px 0px 1px rgba(0,0,0,1); //fix for white line whens animating in chrome
+}
+.slidescroll-enabled .slidescroll-wrap{
+  z-index: 10;
+}
+.covers{
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 1;
+  transition: transform 1s ease;
+}
+.cover-1,
+.cover-2,
+.cover-3,
+.cover-4{
+  position: absolute;
+  background-size: cover;
+  background-position: top center;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.cover-1{
+  background-image: url('../img/bg-1.jpg');
+  transform: translate(0, 0);
+  .no-csstransforms & {
+    top: -200%;
   }
 }
-.bg-1{
-  background-image: url('../img/bg-1.jpg');
-}
-.bg-3{
+.cover-2{
   background-image: url('../img/bg-3.jpg');
+  transform: translate(0, 100%);
+  .no-csstransforms & {
+    top: 100%;
+  }
 }
-.bg-5{
+.cover-3{
   background-image: url('../img/bg-5.jpg');
+  transform: translate(0, 200%);
+  .no-csstransforms & {
+    top: 200%;
+  }
 }
-.bg-11{
+.cover-4{
   background-image: url('../img/bg-11.jpg');
+  transform: translate(0, 300%);
+  .no-csstransforms & {
+    top: 300%;
+  }
 }
+
+.slidescroll-page-3 .covers,
+.slidescroll-page-4 .covers{
+  transform: translate3d(0, -100%, 0);
+  .no-csstransforms3d & {
+    transform: translate(0, -100%);
+  }
+  .no-csstransforms & {
+    top: -100%;
+  }
+}
+
+.slidescroll-page-5 .covers,
+.slidescroll-page-6 .covers,
+.slidescroll-page-7 .covers,
+.slidescroll-page-8 .covers,
+.slidescroll-page-9 .covers,
+.slidescroll-page-10 .covers{
+  transform: translate3d(0, -200%, 0);
+  .no-csstransforms3d & {
+    transform: translate(0, -200%);
+  }
+  .no-csstransforms & {
+    top: -200%;
+  }
+}
+
+.slidescroll-page-11 .covers,
+.slidescroll-page-12 .covers{
+  transform: translate3d(0, -300%, 0);
+  .no-csstransforms3d & {
+    transform: translate(0, -300%);
+  }
+  .no-csstransforms & {
+    top: -300%;
+  }
+}
+
