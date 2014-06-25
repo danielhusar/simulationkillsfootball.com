@@ -93,3 +93,34 @@
   .speed-loop(@i - 1);
 }
 .speed-loop (@iterations);
+
+.rotate{
+  opacity: 0;
+  animation: rotate 9s linear infinite 0s;
+  position: absolute;
+  left: 50%;
+  width: 500px;
+  text-align: center;
+  margin-left: -250px;
+  .no-cssanimations & {
+    opacity: 1;
+  }
+}
+.rotate + .rotate {
+  animation-delay: 3s;
+  .no-cssanimations & {
+    opacity: 0;
+  }
+}
+
+.rotate + .rotate + .rotate {
+  animation-delay: 6s;
+}
+
+@keyframes rotate {
+  0% { opacity: 0; }
+  10% { opacity: 1; }
+  33% { opacity: 1; }
+  34% { opacity: 0;}
+  100% { opacity: 0; }
+}
