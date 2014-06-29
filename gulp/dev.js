@@ -16,7 +16,7 @@ module.exports = function(gulp){
     browser('http://localhost:8090', 'Google Chrome');
 
     gulp.watch(['less/*.less', 'less/**/*.less', 'less/**/**/*.less', 'less/**/**/**/*.less'], ['less']);
-    gulp.watch('public/js/app.js', ['lint']);
+    gulp.watch('public/js/app.js', ['lint', 'scripts']);
   });
 
 

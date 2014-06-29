@@ -96,7 +96,7 @@
 
 .rotate{
   opacity: 0;
-  animation: rotate 9s linear infinite 0s;
+  animation: rotate 6s linear infinite 0s;
   position: absolute;
   left: 50%;
   width: 500px;
@@ -107,14 +107,14 @@
   }
 }
 .rotate + .rotate {
-  animation-delay: 3s;
+  animation-delay: 2s;
   .no-cssanimations & {
     opacity: 0;
   }
 }
 
 .rotate + .rotate + .rotate {
-  animation-delay: 6s;
+  animation-delay: 4s;
 }
 
 @keyframes rotate {
