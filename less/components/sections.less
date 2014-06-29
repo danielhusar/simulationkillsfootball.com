@@ -23,6 +23,8 @@ body{
   right: 0;
   bottom: 0;
   z-index: 1;
+  width: 100%;
+  height: 100%;
   transition: transform 1s ease;
 }
 .cover-1,
@@ -36,17 +38,18 @@ body{
   left: 0;
   right: 0;
   bottom: 0;
+  width: 100%;
+  height: 100%;
 }
 .cover-1{
   background-image: url('../img/bg-1.jpg');
   transform: translate(0, 0);
-  .no-csstransforms & {
-    top: -200%;
-  }
+  z-index: 1;
 }
 .cover-2{
   background-image: url('../img/bg-3.jpg');
   transform: translate(0, 100%);
+  z-index: 2;
   .no-csstransforms & {
     top: 100%;
   }
@@ -54,6 +57,7 @@ body{
 .cover-3{
   background-image: url('../img/bg-5.jpg');
   transform: translate(0, 200%);
+  z-index: 3;
   .no-csstransforms & {
     top: 200%;
   }
@@ -61,45 +65,51 @@ body{
 .cover-4{
   background-image: url('../img/bg-11.jpg');
   transform: translate(0, 300%);
+  z-index: 4;
   .no-csstransforms & {
     top: 300%;
   }
 }
 
-.slidescroll-page-3 .covers,
-.slidescroll-page-4 .covers{
-  transform: translate3d(0, -100%, 0);
-  .no-csstransforms3d & {
+.slidescroll-page-3,
+.slidescroll-page-4{
+  .covers{
+    transform: translate3d(0, -100%, 0);
+  }
+  &.no-csstransforms3d .covers{
     transform: translate(0, -100%);
   }
-  .no-csstransforms & {
-    top: -100%;
+  &.no-csstransforms .covers {
+    margin-top: -100%;
   }
 }
 
-.slidescroll-page-5 .covers,
-.slidescroll-page-6 .covers,
-.slidescroll-page-7 .covers,
-.slidescroll-page-8 .covers,
-.slidescroll-page-9 .covers,
-.slidescroll-page-10 .covers{
-  transform: translate3d(0, -200%, 0);
-  .no-csstransforms3d & {
+.slidescroll-page-5,
+.slidescroll-page-6,
+.slidescroll-page-7,
+.slidescroll-page-8,
+.slidescroll-page-9,
+.slidescroll-page-10{
+  .covers{
+    transform: translate3d(0, -200%, 0);
+  }
+  &.no-csstransforms3d .covers{
     transform: translate(0, -200%);
   }
-  .no-csstransforms & {
+  &.no-csstransforms .covers {
     top: -200%;
   }
 }
 
-.slidescroll-page-11 .covers,
-.slidescroll-page-12 .covers{
-  transform: translate3d(0, -300%, 0);
-  .no-csstransforms3d & {
+.slidescroll-page-11,
+.slidescroll-page-12{
+  .covers{
+    transform: translate3d(0, -300%, 0);
+  }
+  &.no-csstransforms3d .covers{
     transform: translate(0, -300%);
   }
-  .no-csstransforms & {
+  &.no-csstransforms .covers {
     top: -300%;
   }
 }
-
