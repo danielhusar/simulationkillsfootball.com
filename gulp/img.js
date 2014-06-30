@@ -6,7 +6,7 @@ var imagemin = require('gulp-imagemin');
 module.exports = function(gulp){
 
   //sprites
-  gulp.task('sprite', function () {
+  gulp.task('sprite', function() {
     var icons = gulp.src('assets/icons/*.png').pipe(spritesmith({
       imgName: 'icons.png',
       imgPath: '../img/icons.png',
@@ -19,7 +19,7 @@ module.exports = function(gulp){
     icons.css.pipe(gulp.dest('less/components/'));
   });
 
-  gulp.task('imagemin', function () {
+  gulp.task('imagemin', function() {
     gulp.src('public/img/*.png')
         .pipe(imagemin())
         .pipe(gulp.dest('public/img/'));

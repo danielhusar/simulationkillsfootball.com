@@ -5,10 +5,10 @@ var express = require('express');
 var browser = require('open');
 var directory = require('serve-index');
 
-module.exports = function(gulp){
+module.exports = function(gulp) {
 
   //watch Files For Changes
-  gulp.task('watch', function () {
+  gulp.task('watch', function() {
     var app = express();
     app.use(express.static('./public'));
     app.use(directory('./public'));

@@ -10,9 +10,9 @@ var insert = function (obj, index, item) {
   obj.splice(index, 0, item);
 };
 
-module.exports = function(gulp){
+module.exports = function(gulp) {
 
-  gulp.task('lint', function () {
+  gulp.task('lint', function() {
     return gulp.src('public/js/app.js').pipe(jshint()).pipe(jshint.reporter(stylish));
   });
 
@@ -22,13 +22,11 @@ module.exports = function(gulp){
   scriptFiles.push('public/js/libraries/jquery.slidescroll.js');
   scriptFiles.push('public/js/app.js');
 
-  gulp.task('scripts', function () {
+  gulp.task('scripts', function() {
     gulp.src(scriptFiles)
       .pipe(concat('app.min.js'))
       .pipe(uglify())
       .pipe(gulp.dest('public/js'));
   });
-
-
 
 };

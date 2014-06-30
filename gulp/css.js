@@ -5,7 +5,7 @@ var less = require('gulp-less');
 var cssmin = require('gulp-cssmin');
 var prefix = require('gulp-autoprefixer');
 
-module.exports = function(gulp){
+module.exports = function(gulp) {
 
   //run less
   gulp.task('less', function () {
