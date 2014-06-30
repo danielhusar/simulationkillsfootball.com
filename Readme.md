@@ -5,6 +5,12 @@ Install gulp cli
 npm install -g gulp
 ```
 
+If you want to build sprites you need phantomjs, installation using homebrew is:
+
+```bash
+brew install phantomjs
+```
+
 Install all dependencies
 
 ```bash
